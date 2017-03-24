@@ -48,7 +48,7 @@ int main(int argc, const char * argv[]) {
         NSLog(@"instance size %zu",class_getInstanceSize(cls));
         NSLog(@"================================================");
         
-        //成员变量
+        //成员变量列表
         Ivar *ivars = class_copyIvarList(cls, &outCoount);
         
         for (int i = 0 ; i<outCoount; i++) {
