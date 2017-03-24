@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "Test.h"
+#import <objc/runtime.h>
 
 @interface ViewController ()
 
@@ -16,7 +18,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+//    Test *test  =[[Test alloc]init];
+    
+    //Class 结构体指针占用8个字节
+    
+     NSUInteger length =   sizeof(Class);
+    
+     NSLog(@"length = %lu",length);
+    
+    
+    //都是类对象的指针 占用8个字节
+    //FIXME:结构体占用多大的空间,这里的obj实际上是一个结构体指针NSObject *obj = [[NSObject alloc]init];？？
+
+    NSUInteger size =   class_getInstanceSize([NSArray class]);
+    
+    NSLog(@"size  =%lu",size);
+    
+
+    
 }
 
 
