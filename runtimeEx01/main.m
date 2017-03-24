@@ -53,6 +53,15 @@ int main(int argc, const char * argv[]) {
             for (int i = 0 ; i<numClasses; i++) {
                 
                 Class cls =classes[i];
+                // 47行  和55行的转变 好奇特啊？？？？
+                /*
+                 Class 本身是一个指针，Class * 二级指针 
+                 
+                 字符串：一级指针
+                 
+                 字符串数组：二级指针
+                 
+                 */
                 
                 NSLog(@"class name:%s",class_getName(cls));
             }
