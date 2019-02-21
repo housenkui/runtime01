@@ -18,8 +18,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-//    Test *test  =[[Test alloc]init];
+
+//    Test *test  =[[Test alloc]init];111
     
     //Class 结构体指针占用8个字节
     
